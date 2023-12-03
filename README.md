@@ -22,4 +22,23 @@ This project is a movie recommendation system that uses content based recommenda
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://
+   git clone [https://](https://github.com/berylkor/Group9_FinalAIProject_MovieRecommender/tree/main)https://github.com/berylkor/Group9_FinalAIProject_MovieRecommender/tree/main
+
+2. **Install Dependencies**
+   ```bash
+   cd movie-recommender
+   pip install -r movieapp/requirements.txt
+
+3. **Run the Streamlit App**
+    ```bash
+    cd movieapp
+    streamlit run app.py
+
+## How to use 
+
+1. Open the application in your web browser.
+2. Click on a movie image to get recommendations for that movie.
+3. Explore recommended movies with details such as title, release date, and genre.
+
+## Video Demonstration of App 
+https://www.youtube.com/watch?v=Z2Z3MXaofEE
