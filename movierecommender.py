@@ -225,11 +225,13 @@ recommend_movie_titles('The Avengers', streaming_indices, cosine_similarity = st
 """# **5. Saving components**"""
 
 import joblib
-import gzip
-import pickle
 
-with gzip.open('cosine_similarity_matrix.joblib.gz', 'wb') as similarity:
-    joblib.dump(streaming_similarity, similarity, compress=('gzip', 3)) # saving the cosine similarity
+model_components={
+    'tfidf_vectorizer':vectorizer,
+    'cosine_similarity_matrix': streaming_similarity,
+    'indices_mapping':streaming_indices
+}
 
-with open('indices_mapping.joblib', 'wb') as indices:
-    joblib.dump(streaming_indices, indices) # saving the indices
+joblib.dump(model_components,'content-based_recommender.pkl') # save the components used for recommending
+
+joblib.dump(streaming_data, 'streaming_data.pkl') # save the streaming data
