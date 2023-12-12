@@ -32,7 +32,7 @@ This project is a movie recommendation system that uses content- based recommend
 3. **Run the Streamlit App**
     ```bash
     cd movieapp
-    streamlit run app.py
+    streamlit run movie.py
 
 ## How to use 
 
